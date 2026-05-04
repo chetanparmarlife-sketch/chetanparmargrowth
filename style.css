@@ -605,7 +605,12 @@ body::after {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: var(--space-16);
-  align-items: start;
+  align-items: center;
+}
+
+.how-i-work .section-heading,
+.why-work .section-heading {
+  margin-bottom: var(--space-5);
 }
 
 .how-i-work__title {
@@ -681,10 +686,16 @@ body::after {
   justify-self: center;
   width: 100%;
   max-width: 320px;
+  padding-top: var(--space-2);
 }
 
 .how-i-work__diagram svg {
   overflow: visible;
+}
+
+.how-i-work__diagram text,
+.why-work text {
+  font-family: var(--font-body);
 }
 
 .how-i-work__diagram p {
@@ -711,13 +722,14 @@ body::after {
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text-1);
-  margin-bottom: var(--space-10);
+  margin: 0 auto var(--space-8);
+  max-width: 22ch;
 }
 
 .why-work svg {
   width: 100%;
   max-width: 480px;
-  margin: var(--space-10) auto 0;
+  margin: 0 auto;
   display: block;
   overflow: visible;
 }
@@ -729,6 +741,10 @@ body::after {
   .how-i-work__sublists {
     flex-direction: column;
     gap: var(--space-6);
+  }
+  .how-i-work__diagram {
+    margin: var(--space-4) auto 0;
+    padding-top: 0;
   }
 }
 
